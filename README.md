@@ -8,26 +8,27 @@ class Sensor(ABC):
 
 class PHSensor(Sensor):
     def get_reading(self):
-        print("[pH Sensor] Reading: 7.2 pH (Neutral)")
+        return "7.2 pH"
 my_sensor = PHSensor()
 
 
 
 class TempSensor(Sensor):
     def get_reading(self):
-        print("[Temperature Sensor] Reading: 24.5°C")
+        return "24.5°C"
 my_sensor = TempSensor()
 
 
 print("--- Lab Inventory System ---")
 ph = PHSensor()
-print(ph.get_reading())
+print("[pH Sensor] Reading: ", ph.get_reading(), "(Neutral)")
 
 temp = TempSensor()
-print(temp.get_reading())
+print("[Temperature Sensor] Reading: ", temp.get_reading())
 
 print("----------------------------")
 
 
     
+
 
